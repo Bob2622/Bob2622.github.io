@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .head{
+            width: 100%;
+            background: powderblue;
+            height: 60px;
+            position: relative;
+        }
+        .setIndex{
+            width: 120px;
+            height: 20px;
+            border: 1px solid grey;
+            box-shadow: 2px 2px 3px rgba(155,215,215,0.8);
+            display: block;
+            font-size: 12px;
+            text-decoration: none;
+            text-align: center;
+            line-height: 20px;
+            position: absolute;
+            left: 60px;
+            top:30%;
+        }
+        .versions{
+            width: 150px;
+            height: 60px;
+            position: absolute;
+            left: 500px;
+            top: 0;
+            overflow: hidden;
+            border-right: 1px solid grey;
+            border-left: 1px solid grey;
+        }
+        .versions a{
+
+            margin-right: 1px;
+            display: block;
+            width: 73px;
+            height: 120px;
+            float: left;
+            position: relative;
+
+        }
+        .versions a span{
+            width: 100%;
+            height: 60px;
+            display: block;
+            text-align: center;
+            line-height:60px;
+        }
+        .other{
+            display: block;
+            position: absolute;
+            width: 300px;
+            height: 60px;
+            left: 900px;
+            top: 30%;
+
+        }
+        .other li{
+            list-style: none;
+            float: left;
+            font-size: 12px;
+            margin-right: 10px;
+        }
+        .other a{
+            text-decoration: none;
+        }
+        .other .third a{
+            color: red;
+        }
+        .font{
+            background: sandybrown;
+        }
+            .nav{
+                padding-top: 10px;
+                width: 960px;
+                height: 120px;
+                margin: 90px auto;
+                border: 1px solid red;
+                position: relative;
+                background: #e0d9e6;
+            }
+            .menu{
+                margin-left: 250px;
+            }
+        .menu li{
+            list-style: none;
+            float: left;
+            margin-right: 8px;
+        }
+        .menu li a{
+            display: block;
+            text-decoration: none;
+            color: #000000;
+            width: 40px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+        }
+        .menu .nunu{
+            background: rgba(0, 128, 0, 0.38);
+            color: #ffffff;
+
+        }
+        .menu .light{
+            background: green;
+            color: #ffffff;
+        }
+        .search{
+            clear: both;
+        }
+        .search div{
+            float: left;
+        }
+        .inp{
+            width: 500px;
+            height: 30px;
+        }
+        .bnt{
+            width: 90px;
+            height: 40px;
+
+        }
+        .news{
+            width: 160px;
+            height: 16px;
+            font-size: 14px;
+        }
+        .step{
+           position: absolute;
+            top: 90px;
+            right: 50px;
+            text-decoration: none;
+            width: 70px;
+            height: 18px;
+            color: yellowgreen;
+        }
+        .step:hover{
+            background: green;
+        }
+        h2{
+            position: absolute;
+            left: 50px;
+            top: 40px;
+        }
+        .inp{
+            position: absolute;
+            left: 170px;
+            top: 40px;
+            font-size: 18px;
+        }
+        .bnt{
+            position: absolute;
+            left: 690px;
+            top: 40px;
+            cursor: pointer;
+        }
+        .news{
+            position: absolute;
+            left: 780px;
+            top: 50px;
+            text-align: center;
+            overflow: hidden;
+
+        }
+        .list  {
+            list-style: none;
+
+        }
+        .news li a{
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .news li a:hover{
+            color: red;
+            text-decoration: underline;
+        }
+        .zhankai div{
+            width: 450px;
+            height: 200px;
+            border: 1px solid rosybrown;
+            position: absolute;
+            left: 420px;
+            top: 110px;
+            padding: 15px;
+            font-size: 9px;
+            display: none;
+        }
+        .zhankai li {
+            list-style: none;
+            float: left;
+            margin-right: 5px;
+            margin-bottom: 25px;
+            width: 70px;
+            height: 40px;
+        }
+        .zhankai div a{
+            text-decoration: none;
+        }
+        .zhankai div a:hover{
+            text-decoration: underline;
+            color: red;
+        }
+    .shunav{
+        height: 100%;
+        width: 60px;
+        background: sandybrown;
+        position: fixed;
+        z-index: 999;
+        left:0px
+    }
+    body,html{
+        height: 100%;
+    }
+
+    .shouqi{
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        line-height: 40px;
+        margin-top: 300px;
+        left: 0px;
+        background: paleturquoise;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .abar{
+            width:100%;
+            position: absolute;
+            top:50%;
+            margin-top: -175px;
+        }
+.abar ul li{
+    list-style: none;
+    margin-top: 18px;
+    position: relative;
+    width: 260px;
+    height: auto;
+
+}
+.abar ul li .icon{
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+
+
+    width: 60px;
+    height: 70px;
+    display: block;
+    background: pink;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 8px;
+    font-size: 9px;
+    text-decoration: none;
+}
+.contain{
+    position: absolute;
+    left: 60px;
+    top: 0px;
+    height: auto;
+    box-sizing: border-box;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    display: none;
+}
+    .content{
+        width: 200px;
+        height: 70px;
+        background: pink;
+        box-sizing: border-box;
+    }
+
+        .abar ul li .right img{
+            width: 60px;
+            height: 70px;
+        }
+
+    .left{
+        float: left;
+        padding: 12px;
+        box-sizing:border-box;
+        cursor: pointer;
+        height: 70px;
+
+    }
+    .right{
+        float: right;
+        cursor: pointer;
+        text-align: center;
+        line-height: 70px;
+        height: 70px;
+        box-sizing: border-box;
+    }
+
+    .right span{
+        background: springgreen;
+        font-size: 9px;
+        padding: 8px;
+        margin-right: 8px;
+
+    }
+    .up{
+        color: #000000;
+        font-size: 14px;
+
+    }
+    .down{
+        font-size: 9px;
+        color: slategrey;
+    }
+    </style>
+</head>
+<body>
+    <div class="shunav">
+        <div class="abar">
+            <ul>
+                <li>
+                     <a class="icon" href="#">
+
+                         <img src="http://p6.qhimg.com/t01f10ec53838b72e5c.png"><br/>
+                             游戏
+                     </a>
+
+                    <div class="contain">
+                        <div class="content">
+                            <div  class="left">
+                                <div class="up">
+                                    儿童乞丐组团进京
+                                </div>
+                                <div class="down">
+                                    五个乞丐3个儿童
+                                </div>
+                            </div>
+                            <div class="right">
+                               <img src="123.jpg">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </li>
+                <li>
+                    <a class="icon" href="#">
+                        <img src="http://p8.qhimg.com/t01379a975d5350a74f.png">
+                        直播
+                    </a>
+                    <div class="contain">
+                        <div class="content">
+                            <div  class="left">
+                                <div class="up">
+                                    儿童乞丐组团进京
+                                </div>
+                                <div class="down">
+                                    五个乞丐3个儿童
+                                </div>
+                            </div>
+                            <div class="right">
+                               <span>马上看</span>
+                            </div>
+
+
+                        </div>
+                        <div class="content">
+                            <div  class="left">
+                                <div class="up">
+                                    是非江湖阳光碎
+                                </div>
+                                <div class="down">
+                                    危机四起这
+                                </div>
+                            </div>
+                            <div class="right">
+                                <span>马上看</span>
+                            </div>
+                            </div>
+                    </div>
+                </li>
+                <li><a class="icon" href="#">
+                    <img src="http://p5.qhimg.com/t01dd4b4ad91a105e80.png">
+                    生活</a></li>
+                <li><a class="icon" href="#">
+                    <img src="http://p9.qhimg.com/t01dff98275b7dbd6eb.png">智能</a></li>
+
+            </ul>
+        </div>
+        <div class="shouqi">
+            <a href="#">收起</a>
+        </div>
+    </div>
+    <div class="head">
+        <a class="setIndex" href="#">
+            把360导航设为主页
+        </a>
+        <div class="versions">
+            <a href="#" class="font">
+                <span class="icon">经典</span>
+                <span class="icon">class</span>
+            </a>
+            <a href="#" >
+                <span class="icon">新版</span>
+                <span class="icon">New</span>
+            </a>
+        </div>
+        <div class="other">
+            <ul>
+                <li>
+                    <a href="#">免费wifi</a>
+                </li>
+                <li>
+                    <a href="#">反馈意见</a>
+                </li>
+                <li class="third">
+                    <a href="#">换肤（为股民讨个好彩头）</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+            <div class="menu">
+                <ul>
+                    <li ><a href="#" class="light">网页</a></li>
+                    <li><a href="#">新闻</a></li>
+                    <li><a href="#">视频</a></li>
+                    <li><a href="#">音乐</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">地图</a></li>
+                    <li><a href="#">问答</a></li>
+                    <li><a href="#">购票</a></li>
+                    <li><a href="#">机票</a></li>
+                </ul>
+            </div>
+            <div class="search ">
+
+                <div><h2>综合搜索</h2></div>
+                <div><input class="inp" type="text"></div>
+                <div><input  class="bnt" type="button" value="好搜一下"></div>
+                <div class="news">
+                    <ul class="list">
+                        <li><a href="#">1最低价观看影片</a></li>
+                        <li><a href="#">2股市为什么再次暴跌</a></li>
+                        <li><a href="#">3随时知道谁在上网</a></li>
+                        <li><a href="#">4专家解读电梯吃人事件</a></li>
+                        <li><a href="#">5最低价观看影片</a></li>
+                        <li><a href="#">6股市为什么再次暴跌</a></li>
+                        <li><a href="#">7随时知道谁在上网</a></li>
+                        <li><a href="#">8专家解读电梯吃人事件</a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="zhankai">
+            <a href="#" class="step">展开(24)</a>
+            <div>
+                <ul>
+                    <li><a href="#">京东</a></li>
+                    <li><a href="#">淘宝</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">网易</a></li>
+                    <li><a href="#">易趣</a></li>
+                    <li><a href="#">当当网</a></li>
+                    <li><a href="#">京东</a></li>
+                    <li><a href="#">淘宝</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">网易</a></li>
+                    <li><a href="#">易趣</a></li>
+                    <li><a href="#">当当网</a></li>
+                    <li><a href="#">京东</a></li>
+                    <li><a href="#">花千骨在线</a></li>
+                    <li><a href="#">微博</a></li>
+                    <li><a href="#">网易</a></li>
+                    <li><a href="#">易趣</a></li>
+                    <li><a href="#">当当网</a></li>
+                    <li><a href="#">京东</a></li>
+                    <li><a href="#">淘宝</a></li>
+                    <li><a href="#">易趣</a></li>
+                    <li><a href="#">当当网</a></li>
+                    <li><a href="#">京东</a></li>
+                    <li><a href="#">淘宝</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+
+    $(function(){
+        $(".versions a").hover(function(){
+           $(this).stop().animate({top:"-60px"},300)
+        },function(){
+            $(this).stop().animate({top:"0"},300)
+        });
+
+        $(".versions a").click(function(){
+           $(this).addClass("font").siblings().removeClass("font")
+        });
+        $(".step").click(function(event){
+
+            if($(this).next().is(":visible")){
+               $(this).next().hide().end().html("展开(24)")
+            }else{
+                $(this).next().show().end().html("收起(24)")
+            }
+            event.stopPropagation();
+        });
+        $(document).click(function(){
+           $(".zhankai div").hide();
+                   $(".step").html("展开(24)")
+        });
+
+        $(".menu li a").click(function(){
+            $(this).addClass("light").parents().siblings().children().removeClass("light")
+
+        });
+        $(".menu li a").hover(function(){
+           $(this).addClass("nunu")
+        },function(){
+            $(this).removeClass("nunu")
+        });
+
+
+        $(".news").hover(function(){
+
+            clearInterval(timepause)
+        },function(){
+            timepause=setInterval(scrollnews,3000);
+        }).trigger("mouseout");;
+
+        function scrollnews(){
+            var hei=$(".list").find("li").height();
+            $(".list").animate({marginTop:-hei+"px"},900,function(){
+                $(".list").css({"marginTop":"0"}).find("li:first").appendTo($(".list"))
+            })
+        }
+
+        $(".shouqi").click(function(){
+            if($(this).position().left==0){
+                $(this).css({"left":"60px"}).html("展开").parent(".shunav").css({"left":"-60px"})
+            }else{
+                $(this).css({"left":"0"}).html("收起").parent(".shunav").css({"left":"0"})
+            }
+
+
+        })
+    })
+</script>
+</body>
+</html>
