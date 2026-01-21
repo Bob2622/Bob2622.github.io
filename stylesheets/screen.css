@@ -361,10 +361,24 @@ footer span.octocat {
   margin: 0 auto;
 }
 
+#cool-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+html {
+  background: #ece4d8;
+}
+
 /* content */
 
 body {
-  background: #ece4d8;
+  background: transparent;
   font: normal normal 15px/1.5 Georgia, Palatino,” Palatino Linotype”, Times, “Times New Roman”, serif;
   color: #544943;
   -webkit-font-smoothing: antialiased;
